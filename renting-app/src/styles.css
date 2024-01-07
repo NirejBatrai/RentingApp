@@ -43,3 +43,8 @@ body {
 .nav li:hover {
   background-color: #777;
 }
+
+.container {
+  margin: 1rem;
+  text-align: center;
+}

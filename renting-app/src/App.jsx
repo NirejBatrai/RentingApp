@@ -1,13 +1,22 @@
 import { useState } from "react";
-import Navbar from "./assets/Navbar";
+import Navbar from "./pages/Navbar";
 import "./styles.css";
+import Pricing from "./pages/Pricing";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <Navbar />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
     </>
   );
 }
