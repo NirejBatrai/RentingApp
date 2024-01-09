@@ -1,4 +1,4 @@
-* body {
+* {
   box-sizing: border-box;
 }
 
@@ -8,14 +8,13 @@ body {
 
 .nav {
   background-color: #333;
-  color: white;
+  color: aliceblue;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   gap: 2rem;
   padding: 0 1rem;
 }
-
 .site-title {
   font-size: 2rem;
 }
@@ -43,8 +42,6 @@ body {
 .nav li:hover {
   background-color: #777;
 }
-
-.container {
-  margin: 1rem;
+h1 {
   text-align: center;
 }

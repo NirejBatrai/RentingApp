@@ -13,6 +13,9 @@ export default function Navbar() {
         <li>
           <CustomLink to="/about">About</CustomLink>
         </li>
+        <li>
+          <CustomLink to="/login">Login</CustomLink>
+        </li>
       </ul>
     </nav>
   );
