@@ -1,9 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import RegistrationForm from "./RegistrationForm";
 
 export default function Login() {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredPassword, setEnteredPassword] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [showRegistration, setShowRegistration] = useState(false);
 
   function handleInputChange(identifier, value) {
     if (identifier === "email") {
@@ -19,6 +21,14 @@ export default function Login() {
 
   const emailNotValid = submitted && !enteredEmail.includes("@");
   const passwordNotValid = submitted && enteredPassword.trim().length < 6;
+
+  const openRegistrationForm = () => {
+    setShowRegistration(true);
+  };
+
+  const closeRegistrationForm = () => {
+    setShowRegistration(false);
+  };
 
   return (
     <div id="auth-inputs">
@@ -43,13 +53,19 @@ export default function Login() {
         </p>
       </div>
       <div className="actions">
-        <button type="button" className="text-button">
+        <button
+          type="button"
+          className="text-button"
+          onClick={openRegistrationForm}
+        >
           Create a new account
         </button>
         <button className="button" onClick={handleLogin}>
           Sign In
         </button>
       </div>
+
+      {showRegistration && <RegistrationForm onClose={closeRegistrationForm} />}
     </div>
   );
 }
