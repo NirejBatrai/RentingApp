@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import RegistrationForm from "./RegistrationForm";
+import "../index.css";
 
 export default function Login() {
   const [enteredEmail, setEnteredEmail] = useState("");

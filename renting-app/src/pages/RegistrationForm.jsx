@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./RegistrationForm.css";
 
 const RegistrationForm = ({ onClose }) => {
   const [name, setName] = useState("");
@@ -13,7 +14,7 @@ const RegistrationForm = ({ onClose }) => {
   };
 
   return (
-    <div>
+    <div className="controls">
       <p>
         <label>Name</label>
         <input
@@ -22,6 +23,7 @@ const RegistrationForm = ({ onClose }) => {
           onChange={(e) => setName(e.target.value)}
         />
       </p>
+
       <p>
         <label>Email</label>
         <input
@@ -38,7 +40,17 @@ const RegistrationForm = ({ onClose }) => {
           onChange={(e) => setPassword(e.target.value)}
         />
       </p>
-      <button onClick={handleRegister}>Register</button>
+      <p>
+        <label>Confirm Password</label>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </p>
+      <button className="button" onClick={handleRegister}>
+        Register
+      </button>
     </div>
   );
 };
