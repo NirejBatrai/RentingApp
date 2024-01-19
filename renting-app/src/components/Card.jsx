@@ -3,6 +3,7 @@ import React from "react";
 export default function Card({ imageSrc, description }) {
   const containerStyle = {
     border: "solid white 1px",
+    Width: "100px",
   };
 
   const buttonStyle = {
