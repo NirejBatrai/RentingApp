@@ -1,0 +1,12 @@
+
+.pricing-container{
+    justify-content: center;
+    padding: 30px 40px;
+}
+
+
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
