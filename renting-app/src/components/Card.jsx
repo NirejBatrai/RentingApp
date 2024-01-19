@@ -1,4 +1,5 @@
 import React from "react";
+import "./Card.css";
 
 export default function Card({ imageSrc, description }) {
   const containerStyle = {
@@ -17,16 +18,19 @@ export default function Card({ imageSrc, description }) {
   };
 
   return (
-    <div className="card_container" style={containerStyle}>
+    <div className="card-holder">
       <img
-        style={{ backgroundColor: "transparent" }}
+        style={{ backgroundColor: "transparent", height: "25%" }}
         src={imageSrc}
         alt={description}
       />
 
-      <p>{description}</p>
+      <h1>Bike name</h1>
+
+      <p style={{fontSize: "14px"}}>{description}</p>
 
       <button style={buttonStyle}>Learn more</button>
+
     </div>
   );
 }
