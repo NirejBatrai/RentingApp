@@ -1,15 +1,29 @@
+.card-holder {
+  margin: 20px;
+  padding: 20px;
 
-.card-holder{
-    border: "solid white 2px";
-    border-radius: "30px";
-    width: "300px";
-    height: "600px";
-    margin: "20px";
-    padding: "15px 20px";
-    display: "flex";
-    justify-content: "center";
-    align-items: "center";
-    flex-direction: "column";
+  width: 400px;
 
-    background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.card-holder img {
+  width: 100%;
+  max-width: 250px;
+
+  margin-bottom: 15px;
+
+  border-radius: 20px;
+
+  background: transparent;
+}
+
+.card-holder h1 {
+  place-self: start;
 }
