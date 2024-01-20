@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.css";
 
-export default function Card({ imageSrc, description }) {
+export default function Card({ imageSrc, bikeName, description }) {
   const containerStyle = {
     border: "solid white 1px",
     Width: "100px",
@@ -19,18 +19,13 @@ export default function Card({ imageSrc, description }) {
 
   return (
     <div className="card-holder">
-      <img
-        style={{ backgroundColor: "transparent", height: "25%" }}
-        src={imageSrc}
-        alt={description}
-      />
+      <img src={imageSrc} alt={description} />
 
-      <h1>Bike name</h1>
+      <h1>{bikeName}</h1>
 
-      <p style={{fontSize: "14px"}}>{description}</p>
+      <p style={{ fontSize: "14px" }}>{description}</p>
 
       <button style={buttonStyle}>Learn more</button>
-
     </div>
   );
 }
