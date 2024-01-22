@@ -28,10 +28,8 @@ function CustomLink({ to, children, ...props }) {
   const resolevedPath = useResolvedPath(to);
   const isActive = useMatch({ path: resolevedPath.pathname, end: true });
   return (
-    <li className={isActive ? "active" : ""}>
-      <Link to={to} {...props}>
-        {children}
-      </Link>
-    </li>
+    <Link to={to} className={isActive ? "active" : ""} {...props}>
+      {children}
+    </Link>
   );
 }
