@@ -7,16 +7,6 @@ export default function Card({ imageSrc, bikeName, description }) {
     Width: "100px",
   };
 
-  const buttonStyle = {
-    backgroundColor: "#3498db", // Use your desired button color
-    color: "#fff", // Use a contrasting text color
-    padding: "10px 15px",
-    border: "none",
-    borderRadius: "5px",
-    cursor: "pointer",
-    transition: "background-color 0.3s ease",
-  };
-
   return (
     <div className="card-holder">
       <img src={imageSrc} alt={description} />
@@ -25,7 +15,7 @@ export default function Card({ imageSrc, bikeName, description }) {
 
       <p style={{ fontSize: "14px" }}>{description}</p>
 
-      <button style={buttonStyle}>Learn more</button>
+      <button className="button-style">Learn more</button>
     </div>
   );
 }
