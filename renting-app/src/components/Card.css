@@ -14,8 +14,7 @@
 }
 
 .card-holder img {
-  width: 100%;
-  max-width: 250px;
+  height: 200px;
 
   margin-bottom: 15px;
 
@@ -26,4 +25,13 @@
 
 .card-holder h1 {
   place-self: start;
+}
+.button-style {
+  background-color: #08222e;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
