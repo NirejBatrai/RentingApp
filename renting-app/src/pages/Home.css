@@ -1,0 +1,44 @@
+.home-container {
+  width: 100vw;
+  height: 100%;
+}
+
+.landing-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+
+  margin-top: 10%;
+}
+
+.landing-section img {
+  width: 700px;
+  max-width: 1000px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.landing-section h1 {
+  font-size: 60px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.buttons-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30% 0 30%;
+}
+
+.buttons-container button {
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+
+.buttons-container button:hover {
+  background-color: black;
+  color: orange;
+}
