@@ -15,7 +15,10 @@ export default function Card({ imageSrc, bikeName, description }) {
 
       <p style={{ fontSize: "14px" }}>{description}</p>
 
-      <button className="button-style">Learn more</button>
+      <div className="card-buttons-container">
+        <button className="button-style">Learn more</button>
+        <button className="button-style">Select</button>
+      </div>
     </div>
   );
 }
