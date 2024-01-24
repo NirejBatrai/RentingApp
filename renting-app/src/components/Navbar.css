@@ -1,0 +1,7 @@
+.nav {
+  position: sticky;
+  background-color: aliceblue;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
