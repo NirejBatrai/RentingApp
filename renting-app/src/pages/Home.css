@@ -1,5 +1,5 @@
 .home-container {
-  width: 100vw;
+  width: 100%;
   height: 100%;
 }
 
@@ -10,7 +10,7 @@
   justify-content: start;
   flex-direction: column;
 
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .landing-section img {
@@ -25,20 +25,72 @@
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.buttons-container {
-  width: 100%;
-
+/* .buttons-container {
   display: flex;
   justify-content: space-between;
   padding: 0 30% 0 30%;
 }
 
 .buttons-container button {
-  padding: 10px 30px;
+  width: 8rem;
+  padding: 10px 25px;
   border-radius: 20px;
+  margin: 0 10px 0 10px;
 }
 
 .buttons-container button:hover {
   background-color: black;
   color: orange;
+} */
+
+/* <button class="button-55" role="button">Button 55</button> */
+
+/* CSS */
+.button-55 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30% 0 30%;
+}
+
+.button-55 {
+  align-self: center;
+  background-color: rgb(238, 187, 66);
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: 0.75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  margin: 0 10px 0 10px;
+}
+
+.button-55:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+  background-color: orange;
+}
+
+.button-55:focus {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 }
