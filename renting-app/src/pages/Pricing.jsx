@@ -5,6 +5,7 @@ import Image3 from "../assets/PCX.png";
 import Image4 from "../assets/Xmaxx.png";
 import Image5 from "../assets/Tmaxx.png";
 import "./Pricing.css";
+import React from "react";
 
 export default function Pricing() {
   return (
