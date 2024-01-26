@@ -1,3 +1,103 @@
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+   
+}
+
+.about-content {
+  max-width: 800px;
+  padding: 40px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+}
+
 .about-container h1 {
-  background-color: aliceblue;
+  background-color: #f7e019;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.mission-values,
+.why-choose-us,
+.team,
+.contact-info {
+  margin-bottom: 40px;
+}
+
+.mission-values h2,
+.why-choose-us h2,
+.team h2,
+.contact-info h2 {
+  color: #333;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.why-choose-us ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.why-choose-us li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  flex: 1;
+  max-width: 200px;
+  margin: 0 10px 20px;
+}
+
+.team-member img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .about-container {
+    height: auto;
+    margin-top: 80px; /* Adjust this value based on your navbar height */
+  }
+
+  .about-content {
+    padding: 20px;
+  }
+
+  .team-member {
+    flex-basis: 100%;
+  }
 }
