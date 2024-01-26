@@ -2,6 +2,7 @@ import React from "react";
 import Image2 from "../assets/Xadv-750.png";
 import "./Home.css";
 import { useSpring, animated } from "react-spring";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const imageSpring = useSpring({
@@ -42,11 +43,11 @@ export default function Home() {
             Learn more
           </animated.button>
           <animated.button className="button-55" style={buttonSpring}>
-            Pick a bike
+            <Link to="/pricing">Pick a bike You want</Link>
           </animated.button>
-          <animated.button className="button-55" style={buttonSpring}>
+          {/* <animated.button className="button-55" style={buttonSpring}>
             F***z
-          </animated.button>
+          </animated.button> */}
         </div>
       </div>
     </div>
