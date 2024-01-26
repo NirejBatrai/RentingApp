@@ -11,7 +11,7 @@ export default function Home() {
     to: { opacity: 1, transform: "translateX(0)" },
     transform: "scale(1)",
     delay: 600,
-    // Add more animation properties as needed
+    
   });
 
   const textSpring = useSpring({

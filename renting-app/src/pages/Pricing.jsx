@@ -6,13 +6,28 @@ import Image4 from "../assets/Xmaxx.png";
 import Image5 from "../assets/Tmaxx.png";
 import "./Pricing.css";
 import React from "react";
+import { useSpring, animated } from "react-spring";
+
 
 export default function Pricing() {
+  const titleSpring = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    delay: 600,
+  });
+
+  const cardContainerSpring = useSpring({
+    from: { opacity: 0, transform: "translateX(160px)" },
+    to: { opacity: 1, transform: "translateX(10)" },
+    config: { duration: 500 },
+  });
   return (
     <div className="pricing-container">
-      <h1 className="pricing-title">Discover Our Exclusive Models</h1>
+     <animated.h1 className="pricing-title" style={titleSpring}>
+        Discover Our Exclusive Models
+      </animated.h1>
 
-      <div className="card-container">
+      <animated.div className="card-container" style={cardContainerSpring}>
         <Card
           imageSrc={Image1}
           bikeName={"T-max 550cc"}
@@ -199,7 +214,8 @@ export default function Pricing() {
               scooter.
             "
         />
-      </div>
+         </animated.div>
+     
     </div>
   );
 }
