@@ -17,6 +17,7 @@ export default function BikeDetails() {
   });
 
 
+
   return (
     <div className="BikeDetails-container">
       <h1>Bike Details</h1>
