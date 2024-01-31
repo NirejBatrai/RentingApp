@@ -32,12 +32,12 @@ export default function Login() {
   };
 
   return (
-    <div id="auth-inputs">
-      <div className="controls">
+    <div id='auth-inputs'>
+      <div className='controls'>
         <p>
           <label>Email</label>
           <input
-            type="email"
+            type='email'
             className={emailNotValid ? "invalid" : undefined}
             onChange={(event) => handleInputChange("email", event.target.value)}
           />
@@ -45,7 +45,7 @@ export default function Login() {
         <p>
           <label>Password</label>
           <input
-            type="password"
+            type='password'
             className={passwordNotValid ? "invalid" : undefined}
             onChange={(event) =>
               handleInputChange("password", event.target.value)
@@ -53,15 +53,15 @@ export default function Login() {
           />
         </p>
       </div>
-      <div className="actions">
+      <div className='actions'>
         <button
-          type="button"
-          className="text-button"
+          type='button'
+          className='text-button'
           onClick={openRegistrationForm}
         >
           Create a new account
         </button>
-        <button className="button" onClick={handleLogin}>
+        <button className='button' onClick={handleLogin}>
           Sign In
         </button>
       </div>
