@@ -23,11 +23,12 @@ export default function Login() {
   const emailNotValid = submitted && !enteredEmail.includes("@");
   const passwordNotValid = submitted && enteredPassword.trim().length < 6;
 
-  const openRegistrationForm = () => {
+  const openRegistrationForm = async () => {
+    // Call handleRegistration before showing the registration form
     setShowRegistration(true);
   };
 
-  const closeRegistrationForm = () => {
+  const closeRegistrationForm = async () => {
     setShowRegistration(false);
   };
 
@@ -54,6 +55,7 @@ export default function Login() {
         </p>
       </div>
       <div className='actions'>
+        {/* Change onClick to openRegistrationForm */}
         <button
           type='button'
           className='text-button'
