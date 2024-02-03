@@ -1,74 +1,67 @@
-import React, { useState } from "react";
-import RegistrationForm from "./RegistrationForm";
-import "../index.css";
+import React from "react";
+import "./Login.css";
 
-export default function Login() {
-  const [enteredEmail, setEnteredEmail] = useState("");
-  const [enteredPassword, setEnteredPassword] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const [showRegistration, setShowRegistration] = useState(false);
-
-  function handleInputChange(identifier, value) {
-    if (identifier === "email") {
-      setEnteredEmail(value);
-    } else {
-      setEnteredPassword(value);
-    }
-  }
-
-  function handleLogin() {
-    setSubmitted(true);
-  }
-
-  const emailNotValid = submitted && !enteredEmail.includes("@");
-  const passwordNotValid = submitted && enteredPassword.trim().length < 6;
-
-  const openRegistrationForm = async () => {
-    // Call handleRegistration before showing the registration form
-    setShowRegistration(true);
-  };
-
-  const closeRegistrationForm = async () => {
-    setShowRegistration(false);
-  };
-
+function Login() {
   return (
-    <div id='auth-inputs'>
-      <div className='controls'>
-        <p>
-          <label>Email</label>
-          <input
-            type='email'
-            className={emailNotValid ? "invalid" : undefined}
-            onChange={(event) => handleInputChange("email", event.target.value)}
-          />
-        </p>
-        <p>
-          <label>Password</label>
-          <input
-            type='password'
-            className={passwordNotValid ? "invalid" : undefined}
-            onChange={(event) =>
-              handleInputChange("password", event.target.value)
-            }
-          />
-        </p>
+    <div className='wrapper'>
+      <div className='card-switch'>
+        <label className='switch'>
+          <input type='checkbox' className='toggle' />
+          <span className='slider'></span>
+          <span className='card-side'></span>
+          <div className='flip-card__inner'>
+            <div className='flip-card__front'>
+              <div className='title'>Log in</div>
+              <form className='flip-card__form' action=''>
+                <input
+                  className='flip-card__input'
+                  name='email'
+                  placeholder='Email'
+                  type='email'
+                />
+                <input
+                  className='flip-card__input'
+                  name='password'
+                  placeholder='Password'
+                  type='password'
+                />
+                <button className='flip-card__btn'>Let's go!</button>
+              </form>
+            </div>
+            <div className='flip-card__back'>
+              <div className='title'>Sign up</div>
+              <form className='flip-card__form' action=''>
+                <input
+                  className='flip-card__input'
+                  placeholder='Name'
+                  type='text'
+                />
+                <input
+                  className='flip-card__input'
+                  name='email'
+                  placeholder='Email'
+                  type='email'
+                />
+                <input
+                  className='flip-card__input'
+                  name='password'
+                  placeholder='Password'
+                  type='password'
+                />
+                <input
+                  className='flip-card__input'
+                  name='password'
+                  placeholder='Confirm-Password'
+                  type='password'
+                />
+                <button className='flip-card__btn'>Confirm!</button>
+              </form>
+            </div>
+          </div>
+        </label>
       </div>
-      <div className='actions'>
-        {/* Change onClick to openRegistrationForm */}
-        <button
-          type='button'
-          className='text-button'
-          onClick={openRegistrationForm}
-        >
-          Create a new account
-        </button>
-        <button className='button' onClick={handleLogin}>
-          Sign In
-        </button>
-      </div>
-
-      {showRegistration && <RegistrationForm onClose={closeRegistrationForm} />}
     </div>
   );
 }
+
+export default Login;
