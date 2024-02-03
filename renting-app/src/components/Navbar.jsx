@@ -3,22 +3,25 @@ import "./Navbar.css";
 
 export default function Navbar() {
   return (
-    <nav className="nav">
-      <Link to="/" className="site-title">
+    <nav className='nav'>
+      <Link to='/' className='site-title'>
         Site Name
       </Link>
       <ul>
         <li>
-          <CustomLink to="/">Home</CustomLink>
+          <CustomLink to='/'>Home</CustomLink>
         </li>
         <li>
-          <CustomLink to="/pricing">Pricing</CustomLink>
+          <CustomLink to='/pricing'>Pricing</CustomLink>
         </li>
         <li>
-          <CustomLink to="/about">About</CustomLink>
+          <CustomLink to='/about'>About</CustomLink>
         </li>
         <li>
-          <CustomLink to="/login">Login</CustomLink>
+          <CustomLink to='/login'>Login</CustomLink>
+        </li>
+        <li>
+          <CustomLink to='/contact'>Contact</CustomLink>
         </li>
       </ul>
     </nav>
