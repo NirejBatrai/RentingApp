@@ -8,7 +8,7 @@ function Contact() {
         <h1>Chooose the link you want</h1>
         <div className='up'>
           <button className='card1'>
-            <a href='www.instagram.com/' target='_blank'>
+            <a href='https://www.instagram.com/direct/inbox/' target='_blank'>
               <svg
                 className='instagram'
                 fillRule='nonzero'
@@ -41,7 +41,7 @@ function Contact() {
             </a>
           </button>
           <button className='card2'>
-            <a href='https://twitter.com/ ' target='_blank'>
+            <a href='https://twitter.com/' target='_blank'>
               <svg
                 className='twitter'
                 height='30px'
